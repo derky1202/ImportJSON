@@ -247,6 +247,8 @@ function ImportJSONAdvanced(url, fetchOptions, query, parseOptions, includeFunc,
  * @customfunction
  **/
 function ImportJSONBasicAuth(url, username, password, query, parseOptions) {
+  username = "lin";
+  password = "Abcd1234";
   var encodedAuthInformation = Utilities.base64Encode(username + ":" + password);
   var header = {headers: {Authorization: "Basic " + encodedAuthInformation}};
   return ImportJSONAdvanced(url, header, query, parseOptions, includeXPath_, defaultTransform_);
